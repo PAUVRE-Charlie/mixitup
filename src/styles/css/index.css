@@ -161,7 +161,8 @@ body {
   }
   .menuBackground {
     right: 10%;
-    height: 90%;
+    height: 100%;
+    width: 35%;
   }
   .menuBackground .changeBackgroundButton {
     width: 9vh;
