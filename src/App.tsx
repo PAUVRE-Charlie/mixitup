@@ -35,7 +35,7 @@ function App() {
       <div className="menuBackground">
         {
           backgrounds.map((background: Background) => {
-            return <ChangeBackgroundButton key={"buttonBackgroundKey" + background.index} background={backgrounds[background.index - 1]} onPressed={(event) => setBackground(background.index-1)}/>
+            return <ChangeBackgroundButton key={"buttonBackgroundKey" + background.index} background={backgrounds[background.index - 1]} onPressed={(event) => setBackground(background.index-1)} active={background.index === backgroundIndex +1}/>
           })
         }
       </div>

@@ -46,4 +46,5 @@ export interface MixAssetsButtonProps extends Button{
 
 export interface ChangeBackgroundButtonProps extends Button{
     background: Background;
+    active: boolean;
 }
