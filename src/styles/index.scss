@@ -1,3 +1,12 @@
+// color data
+
+$white-color: #ffffff;
+$backgroud-color: #fff6e9;
+$accent-color: #FF8E8E;
+$weak-accent-color: #FFCDCD;
+
+// styles
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,15 +16,152 @@
   
 html {
     scroll-behavior: smooth;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
-  
+
 body {
-    overflow-x: hidden;
+    background-color: $backgroud-color;
+}
+
+.App{
+    height: 100vh;
+    * {
+        font-family: 'Comfortaa', cursive;
+    }
+}
+
+.centeredElement {
+    position: absolute;
+    left: 47%;
+    transform: translate(-50%, -50%);
 }
   
-a {
-    text-decoration: none;
-    cursor: pointer;
+#title{
+    @extend .centeredElement;
+    left: 50%;
+    width: 100%;
+    font-family: 'Allura', cursive;
+    font-weight: 100;
+    font-size: 7vw;
+    text-align: center;
+    color: $accent-color;
+    top: 20%;
+}
+
+/* BACKGROUND */
+
+.backgroundForm {
+    @extend .centeredElement;
+    top: 55%;
+    height: 55%;
+}
+
+.backgroundImage {
+    @extend .centeredElement;
+    bottom: 0%;
+    height: 50%;
+}
+
+/* HUMAN */
+
+.humanImage{
+    @extend .centeredElement;
+    width: 100%;
+    height: 50%;
+    bottom: 0%;
+
+    $bottom-height-percentage: 37%;
+
+    .centeredBodyPart {
+        position: absolute;
+        transform-origin: bottom;
+        transform: translateX(-50%);
+        left: 53%;
+    }
+
+    .headImage{
+        @extend.centeredBodyPart;
+        height: $bottom-height-percentage * 0.435;
+        top: 32%;
+    }
+
+    .bodyImage{
+        @extend.centeredBodyPart;
+        height: $bottom-height-percentage * 0.782;
+        top: 46%;
+    }
+
+    .bottomImage{
+        @extend.centeredBodyPart;
+        height: $bottom-height-percentage;
+        bottom: 0%;
+    }
+
+}
+
+.humanImageSitting{
+    @extend .humanImage;
+    bottom: -6%;
+}
+
+.humanImageStanding{
+    @extend .humanImage;
+}
+
+/* BUTTONS */
+
+.button {
+    border-style: solid;
+    border-width: 3px;
+    border-color: $white-color;
+    background-color: $accent-color;
+    outline: none;
+    transition: transform 200ms ease; 
+    &:hover{
+        transform: scale(0.90);
+    }
+    &:active{
+        transform: scale(0.85);
+    }
+}
+
+$width-buttonMix: 17vw;
+
+#mixAssetsButton{
+    @extend .button;
+    position: absolute;
+    color: $white-color;
+    padding: 15px 0;
+    margin: 0 (100vw-$width-buttonMix)/2;
+    width: $width-buttonMix;
+    top: 80%;
+}
+
+.menuBackground {
+    position: absolute;
+    right: 7%;
+    transition: all 1s ease;
+}
+
+$backroundButtonRadius: 6vh;
+
+.changeBackgroundButton{
+    @extend .button;
+    position: absolute;
+    width: 2*$backroundButtonRadius;
+    height: 2*$backroundButtonRadius;
+    border-radius: 20vh;
+    img {
+        width: $backroundButtonRadius*3/2;
+        object-fit: fill;
+    }
+
+}
+  
+@media screen and (max-width: 1200px) {
+  
+    .menuBackground{
+        right: 0;
+    }
 }

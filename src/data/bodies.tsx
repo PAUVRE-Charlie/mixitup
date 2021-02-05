@@ -20,10 +20,10 @@ const bodies: Body[] = [
         name: 'Jacket 2',
         src: baseURL + 'Jacket2.svg'
     },
-    {
-        name: 'Lab coat',
-        src: baseURL + 'LabCoat.svg'
-    },
+    // {
+    //     name: 'Lab coat',
+    //     src: baseURL + 'LabCoat.svg'
+    // },
     {
         name: 'Long sleev',
         src: baseURL + 'LongSleeve.svg'
@@ -32,18 +32,18 @@ const bodies: Body[] = [
         name: 'Pointing forward',
         src: baseURL + 'PointingForward.svg'
     },
-    {
-        name: 'Pointing up',
-        src: baseURL + 'PointingUp.svg'
-    },
+    // {
+    //     name: 'Pointing up',
+    //     src: baseURL + 'PointingUp.svg'
+    // },
     {
         name: 'Pregnant',
         src: baseURL + 'Pregnant.svg'
     },
-    {
-        name: 'Trench coat',
-        src: baseURL + 'TrenchCoat.svg'
-    },
+    // {
+    //     name: 'Trench coat',
+    //     src: baseURL + 'TrenchCoat.svg'
+    // },
     {
         name: 'Turtle neck',
         src: baseURL + 'TurtleNeck.svg'

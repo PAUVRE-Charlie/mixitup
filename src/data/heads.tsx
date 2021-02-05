@@ -12,10 +12,10 @@ const heads: Head[] = [
         name: 'Afro',
         src: baseURL + 'Afro.svg'
     },
-    {
-        name: 'Airy',
-        src: baseURL + 'Airy.svg'
-    },
+    // {
+    //     name: 'Airy',
+    //     src: baseURL + 'Airy.svg'
+    // },
     {
         name: 'Caesar',
         src: baseURL + 'Caesar.svg'
@@ -28,14 +28,14 @@ const heads: Head[] = [
         name: 'Curly',
         src: baseURL + 'Curly.svg'
     },
-    {
-        name: 'Hijab 1',
-        src: baseURL + 'Hijab1.svg'
-    },
-    {
-        name: 'Hijab 2',
-        src: baseURL + 'Hijab2.svg'
-    },
+    // {
+    //     name: 'Hijab 1',
+    //     src: baseURL + 'Hijab1.svg'
+    // },
+    // {
+    //     name: 'Hijab 2',
+    //     src: baseURL + 'Hijab2.svg'
+    // },
     {
         name: 'Long',
         src: baseURL + 'Long.svg'
