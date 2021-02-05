@@ -1,18 +1,21 @@
-// color data
+/**
+ * Color data
+ */
 
 $white-color: #ffffff;
 $backgroud-color: #fff6e9;
 $accent-color: #FF8E8E;
 $weak-accent-color: #FFCDCD;
 
-// styles
+/**
+ * Styles
+ */
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Comfortaa', cursive;
-    
 }
   
 html {
@@ -99,7 +102,7 @@ body {
 
 .humanImageSitting{
     @extend .humanImage;
-    bottom: -6%;
+    bottom: -6%; // to make the whole body lower on the screen than when the person is standing
 }
 
 .humanImageStanding{
@@ -114,10 +117,13 @@ body {
     border-color: $white-color;
     background-color: $accent-color;
     outline: none;
+    cursor: pointer;
     transition: all 200ms ease; 
+
     &:hover{
         transform: scale(0.90);
     }
+
     &:active{
         transform: scale(0.85);
     }
@@ -151,10 +157,10 @@ $backroundButtonRadius: 6vh;
         width: 2*$backroundButtonRadius;
         height: 2*$backroundButtonRadius;
         border-radius: 20vh;
+
         img {
             width: $backroundButtonRadius*3/2;
         }
-
 }
 }
 
@@ -198,12 +204,10 @@ $backroundButtonRadius: 6vh;
         .changeBackgroundButton {
             width: $backroundButtonRadius*3/2;
             height: $backroundButtonRadius*3/2;
+
             img{
                 width: $backroundButtonRadius;
             }
         }
-    }
-    
-
-    
+    }    
 }

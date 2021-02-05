@@ -11,17 +11,17 @@ const backgrounds: Background[] = [
     {
         name: 'Background 1',
         src: baseURL + 'b1.png',
-        index: 1
+        index: 0
     },
     {
         name: 'Background 2',
         src: baseURL + 'b2.png',
-        index: 2
+        index: 1
     },
     {
         name: 'Background 3',
         src: baseURL + 'b3.png',
-        index: 3
+        index: 2
     },
 ]
 

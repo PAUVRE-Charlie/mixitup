@@ -1,4 +1,7 @@
-import React from 'react'
+/**
+ * The button used to randomize the assets
+ */
+
 import { MixAssetsButtonProps } from '../interfaces'
 
 export default function MixAssetsButton({text, onPressed}: MixAssetsButtonProps) {

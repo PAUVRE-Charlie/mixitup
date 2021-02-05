@@ -2,7 +2,7 @@
  * This file gathers some interfaces
  */
 
-export interface BodyPart {
+interface BodyPart {
     name: string;
     src: string;
 }
@@ -24,6 +24,7 @@ export interface Human{
     bottom: Bottom;
 }
 
+// this element is used to store the indexes of the three assets currently shown on the screen
 export interface RandomSelection {
     headIndex: number;
     bodyIndex: number;
@@ -36,15 +37,15 @@ export interface Background{
     index: number;
 }
 
-export interface Button {
+interface ButtonProps {
     onPressed: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-export interface MixAssetsButtonProps extends Button{
+export interface MixAssetsButtonProps extends ButtonProps{
     text: string;
 }
 
-export interface ChangeBackgroundButtonProps extends Button{
+export interface ChangeBackgroundButtonProps extends ButtonProps{
     background: Background;
     active: boolean;
 }
