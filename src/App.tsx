@@ -31,7 +31,6 @@ function App() {
       <img className="backgroundForm" src={process.env.PUBLIC_URL + '/assets/background-form.svg' } alt="background form"/>
       <BackgroundComponent name={backgrounds[backgroundIndex].name} src={backgrounds[backgroundIndex].src} index={backgrounds[backgroundIndex].index}/>
       <HumanComponent head={heads[headIndex]} body={bodies[bodyIndex]} bottom={bottoms[bottomIndex]} />
-      <MixAssetsButton text="Mix it up" onPressed={(event) => newRandomSelection()}/>
       <div className="menuBackground">
         {
           backgrounds.map((background: Background) => {
@@ -39,6 +38,7 @@ function App() {
           })
         }
       </div>
+      <MixAssetsButton text="Mix it up" onPressed={(event) => newRandomSelection()}/>
     </div>
   );
 }
