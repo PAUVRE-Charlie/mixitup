@@ -3,25 +3,20 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Comfortaa', cursive;
 }
 
 html {
   scroll-behavior: smooth;
-  overflow-y: hidden;
-  overflow-x: hidden;
 }
 
 body {
   background-color: #fff6e9;
+  overflow: hidden;
 }
 
 .App {
   height: 100vh;
-}
-
-.App * {
-  font-family: 'Comfortaa', cursive;
 }
 
 .centeredElement, #title, .backgroundForm, .backgroundImage, .humanImage, .humanImageSitting, .humanImageStanding {
@@ -89,7 +84,7 @@ body {
 }
 
 /* BUTTONS */
-.button, #mixAssetsButton, .changeBackgroundButton {
+.button, #mixAssetsButton, .menuBackground .changeBackgroundButton {
   border-style: solid;
   border-width: 3px;
   border-color: #ffffff;
@@ -99,12 +94,12 @@ body {
   transition: all 200ms ease;
 }
 
-.button:hover, #mixAssetsButton:hover, .changeBackgroundButton:hover {
+.button:hover, #mixAssetsButton:hover, .menuBackground .changeBackgroundButton:hover {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
 
-.button:active, #mixAssetsButton:active, .changeBackgroundButton:active {
+.button:active, #mixAssetsButton:active, .menuBackground .changeBackgroundButton:active {
   -webkit-transform: scale(0.85);
           transform: scale(0.85);
 }
@@ -121,26 +116,60 @@ body {
 .menuBackground {
   position: absolute;
   right: 7%;
+  height: 100%;
+  width: 50%;
+  overflow-y: hidden;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
-.changeBackgroundButton {
+.menuBackground .changeBackgroundButton {
   position: absolute;
   width: 12vh;
   height: 12vh;
   border-radius: 20vh;
 }
 
-.changeBackgroundButton img {
+.menuBackground .changeBackgroundButton img {
   width: 9vh;
-  -o-object-fit: fill;
-     object-fit: fill;
 }
 
 @media screen and (max-width: 1200px) {
   .menuBackground {
     right: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .centeredElement, #title, .backgroundForm, .backgroundImage, .humanImage, .humanImageSitting, .humanImageStanding {
+    height: 40vw;
+    top: 30%;
+  }
+  #title {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 5%;
+  }
+  #mixAssetsButton {
+    position: absolute;
+    color: #ffffff;
+    padding: 15px 0;
+    margin: 0 20.75vw;
+    width: 34vw;
+    top: 60%;
+    left: -10%;
+  }
+  .menuBackground {
+    top: 5%;
+    right: 10%;
+    height: 90%;
+  }
+  .menuBackground .changeBackgroundButton {
+    width: 9vh;
+    height: 9vh;
+  }
+  .menuBackground .changeBackgroundButton img {
+    width: 6vh;
   }
 }
 /*# sourceMappingURL=index.css.map */

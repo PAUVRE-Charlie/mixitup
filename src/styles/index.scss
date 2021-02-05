@@ -11,24 +11,21 @@ $weak-accent-color: #FFCDCD;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Comfortaa', cursive;
+    
 }
   
 html {
     scroll-behavior: smooth;
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 
 body {
     background-color: $backgroud-color;
+    overflow: hidden;
 }
 
 .App{
     height: 100vh;
-    * {
-        font-family: 'Comfortaa', cursive;
-    }
 }
 
 .centeredElement {
@@ -138,30 +135,76 @@ $width-buttonMix: 17vw;
     top: 80%;
 }
 
+$backroundButtonRadius: 6vh;
+
 .menuBackground {
     position: absolute;
     right: 7%;
+    height: 100%;
+    width: 50%;
+    overflow-y: hidden;
     transition: all 1s ease;
-}
 
-$backroundButtonRadius: 6vh;
-
-.changeBackgroundButton{
-    @extend .button;
-    position: absolute;
-    width: 2*$backroundButtonRadius;
-    height: 2*$backroundButtonRadius;
-    border-radius: 20vh;
-    img {
-        width: $backroundButtonRadius*3/2;
-        object-fit: fill;
-    }
+    .changeBackgroundButton{
+        @extend .button;
+        position: absolute;
+        width: 2*$backroundButtonRadius;
+        height: 2*$backroundButtonRadius;
+        border-radius: 20vh;
+        img {
+            width: $backroundButtonRadius*3/2;
+        }
 
 }
+}
+
+
   
 @media screen and (max-width: 1200px) {
   
     .menuBackground{
         right: 0;
     }
+
+}
+
+@media screen and (max-width: 900px) {
+  
+    .centeredElement{
+        height: 40vw;
+        top: 30%;
+    }
+
+    #title {
+        transform: translateX(-50%);
+        top: 5%;
+    }
+
+    #mixAssetsButton{
+        position: absolute;
+        color: $white-color;
+        padding: 15px 0;
+        margin: 0 (100vw-$width-buttonMix)/4;
+        width: $width-buttonMix*2;
+        top: 60%;
+        left: -10%;
+    }
+
+    .menuBackground {
+
+        top: 5%;
+        right: 10%;
+        height: 90%;
+
+        .changeBackgroundButton {
+            width: $backroundButtonRadius*3/2;
+            height: $backroundButtonRadius*3/2;
+            img{
+                width: $backroundButtonRadius;
+            }
+        }
+    }
+    
+
+    
 }
